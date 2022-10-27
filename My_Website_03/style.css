@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Open+Sans:ital,wght@0,800;1,700&family=Playfair+Display:ital,wght@1,700&family=Rubik:ital,wght@1,600&family=Smokum&display=swap');
+
+:root {
+    --brand: #B33030;
+    --body: #606060;
+    --dark: #19282F;
+    --border-radius: 4px;
+    --shadow: 0px 4px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* ----- BASIC SETTINGS ----- */
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    color: var(--dark);
+    font-family: "Domine", sans-serif;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+    transition: all 0.4s linear;
+}
+
+a:hover {
+    color: var(--brand);
+}
+
+a.custom-link {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-intro {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.section-intro p {
+    max-width: 500px;
+    margin: auto;
+}
+
+.custom-card {
+    transition: all 0.4s ease;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+}
+
+.custom-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-5px);
+}
+
+/* ----- NAVBAR ----- */
+.navbar.bg-white {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--brand);
+}
+
+
+/* ----- HERO ----- */
+#hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/cover.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#hero h1 {
+    font-weight: 700;
+}
+
+#hero h1,
+#hero p {
+    color: #fff;
+}
+
+#hero p {
+    max-width: 500px;
+    margin: 12px auto 28px auto;
+}
+
+#hero .input-group {
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+}
+
+#hero .input-group input {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+#hero .input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#hero .input-group input:focus {
+    box-shadow: none;
+}
+
+/* BTN */
+.btn {
+    padding: 12px 28px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-brand {
+    background-color: var(--brand);
+    color: #fff;
+}
+
+.btn-brand:hover {
+    color: #fff;
+}
+
+
+/* ----- SERVICES ----- */
+.service {
+    padding: 45px 25px;
+    text-align: center;
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    background-color: var(--brand);
+    color: #fff;
+    border-radius: var(--border-radius);
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.service h3 {
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.service p {
+    font-size: 14px;
+}
+
+
+/* ----- CTA ----- */
+#cta {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/cover.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#cta h2,
+#cta p {
+    color: #fff;
+}
+
+
+/* ----- PORTFOLIO ----- */
+.project-wrapper {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-wrapper img {
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.7s ease;
+}
+
+.project-wrapper .btn {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.project-wrapper:hover .btn-brand {
+    top: 50%;
+    opacity: 1;
+}
+
+.project-wrapper:hover img {
+    transform: scale(1.2);
+    filter: blur(1.5px);
+}
+
+
+/* ----- REVIEWS ----- */
+#testimonial {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/cover3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#testimonial .section-intro h1,
+#testimonial .section-intro p {
+    color: #fff;
+}
+
+#testimonial .owl-dot span {
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: 12px;
+    height: 12px;
+    transition: all 0.7s ease;
+}
+
+#testimonial .owl-dot.active span {
+    width: 30px;
+    background-color: var(--brand);
+    border-color: var(--brand);
+}
+
+.review {
+    padding: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+}
+
+.review .stars {
+    color: orange;
+}
+
+.review p {
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.review h3,
+.review small {
+    color: #fff;
+}
+
+.review span {
+    color: var(--brand);
+}
+
+.review img {
+    width: 75px !important;
+    border-radius: 100px;
+}
+
+
+/* ----- TEAM ----- */
+.team-member {
+    text-align: center;
+}
+
+.team-member h3 {
+    margin-top: 24px;
+    margin-bottom: 1px;
+}
+
+.team-member .team-member-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member img {
+    transition: all 0.5s ease;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-links a {
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    color: var(--brand);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+    margin: 4px;
+}
+
+.social-links a:hover {
+    background-color: var(--brand);
+    color: #fff;
+}
+
+.team-member .social-links {
+    position: absolute;
+    bottom: 40px;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+
+}
+
+.team-member:hover .social-links {
+    bottom: 20px;
+    opacity: 1;
+}
+
+.team-member:hover img {
+    transform: scale(1.3);
+}
+
+
+/* ----- MILESTONE ----- */
+#milestone {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/cover3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.counter .divider {
+    width: 70px;
+    height: 2px;
+    background-color: var(--brand);
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.counter h1 {
+    line-height: 1;
+}
+
+.counter h1,
+.counter p {
+    color: #fff;
+}
+
+
+/* ----- BLOG ----- */
+.blog-post {
+    text-align: center;
+}
+
+.blog-post img {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.blog-post .tag {
+    padding: 4px 12px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: var(--brand);
+    color: #fff;
+    border-radius: 3px;
+}
+
+.blog-post-content {
+    padding: 28px;
+}
+
+.blog-post h3 {
+    margin-top: 12px;
+}
+
+
+/* ----- CONTACT ----- */
+#contact input.form-control {
+    height: 49px;
+}
+
+#contact .form-control {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--brand);
+}
+
+#contact .map {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+
+/* ----- FOOTER ----- */
+footer p,
+footer ul li a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+footer h3 {
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-top {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("images/cover3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.footer-top .logo-footer {
+    margin-bottom: 16px;
+}
+
+.footer-bottom {
+    background-color: var(--brand);
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
